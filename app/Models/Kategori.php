@@ -5,13 +5,6 @@ use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Support\Facades\DB;
 
-
-// Barang model
-// Author : mrantazy68
-// Written: 2023 - PKK
-// URL    : experimen.test
-// ---------------------------------------------------------------------------
-
 class Kategori extends Model
 {
     use HasFactory;
@@ -46,9 +39,5 @@ class Kategori extends Model
                 ->select('barang.id','kategori.deskripsi',DB::raw('ketKategori(kategori.kategori) as ketkategori'),
                          'barang.merk','barang.seri','barang.spesifikasi','barang.stok')
                 ->get();
-
     }
-
-    
-
 }
